@@ -1,0 +1,30 @@
+body {
+    background-color: #1D2D3B;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+header {
+    background-color: #05131F;
+}
+
+header figure {
+    width: 50px;
+}
+
+main .container {
+    width: 65%;
+}
+
+main .cards {
+    gap: 30px;
+}
+
+main .card {
+    flex-basis: calc(100% / 3 - 30px + (30px / 3));
+    background-color: #112030;
+    border: 0;
+}
