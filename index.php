@@ -27,14 +27,15 @@
         <main class="py-5">
             <div class="container">
                 <div class="row">
-                    <div class="cards d-flex">
-                        <div class="card py-4 px-5 text-center d-flex flex-column gap-2">
+                    <div class="cards d-flex flex-wrap">
+                        <div v-for="(element, index) in allDisks" :key="index"
+                            class="card py-4 px-5 text-center d-flex flex-column gap-2">
                             <figure>
-                                <img src="https://images-na.ssl-images-amazon.com/images/I/51sBr4IWDwL.jpg" alt="">
+                                <img :src="element.poster" :alt="element.title">
                             </figure>
-                            <h5 class="fw-bold ">New Jersey</h5>
-                            <h6>Bon Jovi</h6>
-                            <h5 class="fw-bold">1988</h5>
+                            <h5 class="fw-bold ">{{ element.title }}</h5>
+                            <h6>{{ element.author }}</h6>
+                            <h5 class="fw-bold">{{ element.year}}</h5>
                         </div>
                     </div>
                 </div>
